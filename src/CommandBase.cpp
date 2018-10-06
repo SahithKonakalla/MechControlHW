@@ -11,6 +11,7 @@
 
 DriveTrain* CommandBase::drive = nullptr;
 Lift* CommandBase::lift = nullptr;
+Arm* CommandBase::arm = nullptr;
 std::unique_ptr<OI> CommandBase::oi;
 
 

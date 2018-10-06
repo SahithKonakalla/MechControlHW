@@ -59,10 +59,10 @@ public:
 			m_autonomousCommand = &m_defaultAuto;
 		}
 
-		m_autonomousCommand = m_chooser.GetSelected();
+		autonomousCommand = m_chooser.GetSelected();
 
-		if (m_autonomousCommand != nullptr) {
-			m_autonomousCommand->Start();
+		if (autonomousCommand != nullptr) {
+			autonomousCommand->Start();
 		}
 	}
 
@@ -88,7 +88,7 @@ public:
 private:
 	// Have it null by default so that if testing teleop it
 	// doesn't have undefined behavior and potentially crash.
-	frc::Command* m_autonomousCommand = nullptr;
+	frc::Command* autonomousCommand = nullptr;
 	ExampleCommand m_defaultAuto;
 	MyAutoCommand m_myAuto;
 	frc::SendableChooser<frc::Command*> m_chooser;
